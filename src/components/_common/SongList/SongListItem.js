@@ -25,6 +25,7 @@ function SongListItem({ track, playerStore }) {
       }}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}>
+
       <Flex
         flexWrap="wrap"
         css={{
