@@ -5,7 +5,6 @@ export function getNewReleases({ token, limit }) {
 }
 
 export function getAlbumById(id, { token }) {
-  // console.log('xxx id=' + id + ' | token=' + token)
   return API.getAlbumById(id, { token }).then(response => {
     // console.log(response)
     response.title = response.name
@@ -21,8 +20,8 @@ export function getAlbumById(id, { token }) {
 
     response.tracks = response.tracks.items.map(track => {
       // track.name = track.name
-      track.artist = response.artist
-      track.album = track.artists.map(artist => artist.name).join(', ')
+      track.artist = track.artists.map(artist => artist.name).join(', ')
+      track.album = response.title
       track.image = response.images[0].url
       track.previewUrl = track.preview_url
       track.durationMs = track.duration_ms

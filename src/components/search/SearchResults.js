@@ -7,16 +7,19 @@ import colors from '@features/_ui/colors'
 export default function ResultRow({ title, data, route }) {
   return (
     <Fragment>
-      <Box width={1}>
-        <h1
-          css={{
-            color: colors.link,
-            fontSize: '1.8em',
-            padding: '50px 10px 0px',
-          }}>
-          {title}
-        </h1>
-      </Box>
+      {data.length > 0 ? (
+        <Box width={1}>
+          <h1
+            css={{
+              color: colors.link,
+              fontSize: '1.8em',
+              padding: '50px 10px 0px',
+            }}>
+            {title}
+          </h1>
+        </Box>
+      ) : null}
+
       <Box width={1}>
         <Flex flexWrap="wrap">
           {data.map(item => (
