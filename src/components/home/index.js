@@ -45,12 +45,13 @@ function HomePage({ albums }) {
       </Box>
 
       <Fetch
-        service={() => NewReleasesService.getNewReleases({ token: token })}>
+        service={() =>
+          NewReleasesService.getNewReleases({ token: token, limit: 6 })
+        }>
         {({ data }) => {
           // console.log(data)
           return <AlbumList albums={data.albums.items} />
         }}
-        {/* {({ albums }) => <AlbumList albums={albums} />} */}
       </Fetch>
     </Flex>
   )
