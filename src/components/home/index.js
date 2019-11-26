@@ -40,7 +40,7 @@ function HomePage({ albums }) {
             fontSize: '2em',
             padding: '50px 10px 10px',
           }}>
-          New Releases
+          New Releases - i Kamlai
         </h1>
       </Box>
 
